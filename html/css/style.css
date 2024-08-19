@@ -68,6 +68,12 @@ a {
     font-size: xx-large;
 }
 
+footer {
+    background-color: #e76f3d;
+    padding: 10px;
+    text-align: center;
+}
+
 .Experience  > li {
     display: flex;
     flex-direction: column;
