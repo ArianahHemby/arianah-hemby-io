@@ -26,7 +26,7 @@ body {
         list-style-type: none;
         color: rgb(102, 87, 3);
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-size: small;
+        font-size: medium;
     }
 }
 
@@ -84,5 +84,9 @@ footer {
     display: flex;
     flex-direction: column;
 
+}
+
+#messages ul {
+    font-size: xx-large;
 }
 
