@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html> <head>
+    <title>My First Html Code</title>
+    <meta name="author" content="Arianah Hemby">
+    <meta name="description" content="html website message section">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section>
+        <h2>Leave a Message</h2>
+        <form name="leave_message">
+            <label for="name">Name</label><br>
+            <input type="text" id="name" required="true"><br>
+            <label for="email">Email</label><br>
+            <input type="text" id="email" required="true"><br>
+            <label for="userMessage">Message</label><br>
+            <textarea id="userMessage" required="true"></textarea><br>
+            <button type="submit" >Submit</button><br>
+        </form>
+    </section>
+    <section id="messages">
+        <h2>Messages</h2>
+            <ul>
+            </ul>
+    </section>
+</section>
+<section id="back button">
+    <button type="button" onclick="window.location.href='index.html'">Back</button>
+</section>
+    <script src="java/msg.js"></script>
+</body>

@@ -34,14 +34,22 @@ h1 {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: xx-large;
-    color: #e76f3d;
+    color: #c9653a;
 }
 
 h2 {
     text-align: center;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: large;
-    color: #e76f3d;
+    color: #c9653a;
+}
+
+p {
+    padding: 5px;
+    margin: 5px;
+    margin-bottom: 15px;
+    text-wrap: balance;
+    text-align: center;
 }
 
 ul {
@@ -57,6 +65,7 @@ ul {
   li {
     padding: 2px;
     margin: 2px;
+    text-align: center;
     
   }
 
@@ -69,16 +78,28 @@ a {
 }
 
 footer {
-    background-color: #e76f3d;
+    background-color: #c9653a;
     padding: 10px;
     text-align: center;
 }
 
-.Experience  > li {
+.flex-container {
     display: flex;
     flex-direction: column;
-
+    background-color: #c9653a;
 }
+
+.flex-container  > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  text-wrap: balance;
+  line-height: 15px;
+  font-size: 12px;
+}
+
+
 
 .Connect {
     display: flex;
@@ -88,5 +109,10 @@ footer {
 
 #messages ul {
     font-size: xx-large;
+}
+
+#back-button {
+    padding: 10px;
+    margin-top: 10px;
 }
 
