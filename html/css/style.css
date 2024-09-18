@@ -3,8 +3,9 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: aquamarine;
+    background-color: #E0E0E2;
 }
+
 
 h1 {
     text-align: center;
@@ -17,7 +18,7 @@ h2 {
     text-align: center;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: large;
-    color: #c9653a;
+    color: #130e0b;
 }
 
 p {
@@ -26,13 +27,15 @@ p {
     margin-bottom: 15px;
     text-wrap: balance;
     text-align: center;
+    font-size: larger;
 }
+
 
 ul {
 
     padding: 200px;
     margin: 5px;
-    border: 10px solid #9bcfe0;
+    border: 10px solid #001011;
     list-style-type: none;
     background-color: #00a7c7;
   
@@ -42,12 +45,13 @@ ul {
     padding: 2px;
     margin: 2px;
     text-align: center;
+    font-size: x-large;
     
   }
 
 
 a { 
-    color: rgb(102, 87, 3);
+    color: #001011;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: xx-large;
 }
@@ -61,9 +65,11 @@ footer {
     display: flex;
     flex-direction: column;
     background-color: #95cee5;
+
+    
 }
 
-.flex-container  > div {
+.flex-container div {
   min-width: 200px;
   min-height: 25px;
   margin: 15px;
@@ -74,12 +80,7 @@ footer {
   font-size: 12px;
 }
 
-
-#messages ul {
-    font-size: xx-large;
-}
-
-#back-button {
+button {
     margin-top: 10px;
 }
 
@@ -87,22 +88,23 @@ footer {
 @media (max-width: 600px) {
     ul {
 
-        padding: 15px;
+        padding: 50px;
         margin: 5px;
-        border: 10px solid #9bcfe0;
+        border: 5px solid #001011;
         list-style-type: none;
         background-color: #00a7c7;
       
       }
     
       li {
-        padding: 2px;
-        margin: 2px;
-        
+        padding: 1px;
+        margin: 1px;
+        font-size: medium;
       }
-      a { 
+
+      p { 
         list-style-type: none;
-        color: rgb(102, 87, 3);
+        color: #001011;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         font-size: medium;
     }

@@ -8,19 +8,21 @@ messageForm.addEventListener("submit", function(event) {
     var userEmail = event.target.email.value;
     var message = event.target.userMessage.value;
 
+    //testing the value in console to make sure they appear correctly
     console.log("Name is ", userName)
     console.log("Email is ", userEmail);
     console.log("Message is ", message);
 
+    //setting up the variables that will attach the message to appear on the website
     var messageSection = document.getElementById("messages");
     var messageList = messageSection.querySelector("ul");
     var newMessage = document.createElement("li");
 
     newMessage.innerHTML =  `
-        ${userName}</a> 
-        <a href="mailto:${userEmail}">${userEmail}</a> 
+        ${userName}</h2> 
+        <h2 href="mailto:${userEmail}">${userEmail}</h2> 
         <span>${message}</span>
-    `;
+    `; //structure of message
     
 
     // remove button
@@ -29,72 +31,16 @@ messageForm.addEventListener("submit", function(event) {
     removeButton.type = "button";
 
     removeButton.addEventListener("click",function(event){
+        //identifies the button and removes entry
         var entry = this.parentNode;
         entry.remove();
 
-        updateStorage();
-
     })
     
+    //attaches the message and remove button
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
-
-    saveToStorage(userName, userEmail, userMessage);
 
     messageForm.reset()
     
 });
-
-/*
-function saveToStorage(name, email, message) {
-    var messages = JSON.parse(localStorage.getItem("savedMsg")) || [];
-    messages.push(userName, userEmail, userMessage);
-    localStorage.setItem("savedMsgs", JSON.stringify(messages))
-}
-
-function updateStorage() {
-    var messages = [];
-    var messageSection = document.getElementById("messages");
-    var messageList = messageSection.querySelector("ul");
-
-    for (k = 0; k < messages.length; k++){
-        var msg = document.createElement("li");
-        msg.innerText = messages[k];
-        messageList.appendChild(msg);
-        
-    }
-
-    localStorage.setItem("savedMsgs", JSON.stringify(messages))
-}
-
-function loadMsg() {
-    var messages = localStorage.getItem("savedMsg") || [];
-    var messageSection = document.getElementById("messages");
-    var messageList = messageSection.querySelector("ul");
-
-    for (k = 0; k < messages.length; k++){
-        var msg = document.createElement("li");
-        msg.innerHTML = `
-            ${msg.userName} 
-            <a href="mailto:${msg.userEmail}">${msg.userEmail}</a> 
-            <span>${msg.message}</span>
-        `;
-    
-    var removeButton = document.createElement("button");
-    removeButton.innerText = "remove";
-    removeButton.type = "button";
-
-    removeButton.addEventListener("click",function(event){
-        var entry = this.parentNode;
-        entry.remove();
-
-        updateStorage();
-
-    })
-    
-    newMessage.appendChild(removeButton);
-    messageList.appendChild(newMessage);
-    }
-}
-
-window.addEventListener("loadPage", loadMsg); */
