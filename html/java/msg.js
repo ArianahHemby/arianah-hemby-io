@@ -19,7 +19,7 @@ messageForm.addEventListener("submit", function(event) {
     var newMessage = document.createElement("li");
 
     newMessage.innerHTML =  `
-        ${userName}</h2> 
+        <h2>${userName}</h2> 
         <h2 href="mailto:${userEmail}">${userEmail}</h2> 
         <span>${message}</span>
     `; //structure of message
